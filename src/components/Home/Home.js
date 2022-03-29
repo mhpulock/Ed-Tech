@@ -4,32 +4,32 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Slider from '../Slider/Slider';
 import Reviews from '../Reviews/Reviews';
-import Bike from '../Bike/Bike';
+import Book from '../Book/Book';
 
 const Home = () => {
 
-    const [bikes, setBike] = useState([]);
+    const [Books, setBike] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-ocean-22466.herokuapp.com/bikes')
+        fetch('./tools.JSON')
             .then(res => res.json())
             .then(data => setBike(data))
 
     }, [])
 
-    const bike = bikes.slice(6, 12);
+    const book = Books.slice(1, 5);
 
     return (
         <div>
             <Header></Header>
             <Slider></Slider>
-            <h1 className="home-serv">Latest Bikes</h1>
+            <h1 className="home-serv">Latest Books</h1>
             <div className="container ">
                 <div className="row g-4">
                     {
-                        bike.map(bike => <Bike
-                            key={bike._id}
-                            bike={bike}
-                        ></Bike>
+                        book.map(book => <Book
+                            key={book._id}
+                            book={book}
+                        ></Book>
                         )
                     }
 
@@ -46,7 +46,7 @@ const Home = () => {
 
             {/* Subscribe secsion */}
             <div className="subscrib-m">
-                <h1>Subscribe To Our 'Bike Choice' For Latest Update</h1>
+                <h1>Subscribe To Our 'Ed-Tech' For Latest Update</h1>
                 <div>
                     <div className="dis-f">
                         <input type="text" className="form-control" placeholder="Enter your Email" aria-label="Recipient's username" aria-describedby="button-addon2" />

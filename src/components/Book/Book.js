@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Bike.css';
-const Bike = (props) => {
-    const { _id, img, name, description, price } = props.bike;
-    const url = `/bike/${_id}`;
+import './Book.css';
+const Book = (props) => {
+    const { _id, img, name, description, price } = props.book;
+    const url = `/book/${_id}`;
 
     return (
 
@@ -25,4 +25,4 @@ const Bike = (props) => {
     );
 };
 
-export default Bike;
+export default Book;

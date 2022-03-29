@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import Bike from '../Bike/Bike';
+import Book from '../Book/Book';
+import Bike from '../Book/Book';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import './Explorebike.css';
+import './Explorebook.css';
 
-const Explorebike = () => {
-    const [bikes, setBike] = useState([]);
+const Explorebook = () => {
+    const [books, setBike] = useState([]);
     useEffect(() => {
-        fetch('https://guarded-ocean-22466.herokuapp.com/bikes')
+        fetch('./tools.JSON')
             .then(res => res.json())
             .then(data => setBike(data))
     }, [])
 
-    console.log(bikes);
+    console.log(books);
     return (
         <div >
             <Header></Header>
-            <h1 className="bike-cl">Bikes Collections</h1>
+            <h1 className="bike-cl">Books Collections</h1>
             <div className="container">
                 <div className="row">
                     {
-                        bikes.map(bike => <Bike
-                            key={bike._id}
-                            bike={bike}
-                        ></Bike>
+                        books.map(book => <Book
+                            key={book._id}
+                            book={book}
+                        ></Book>
                         )
                     }
                 </div>
@@ -34,4 +35,4 @@ const Explorebike = () => {
     );
 };
 
-export default Explorebike;
+export default Explorebook;

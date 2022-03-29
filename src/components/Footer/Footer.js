@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="container-h">
             <nav className="text-light footer-bg">
                 <div >
-                    <h1 >Bike Choice</h1>
-                    <p>Bike Choice is Original Japanese showroom for purchasing reliable motorcycles. All of you are invited to our showroom. We have been providing best service for last 5 years </p>
+                    <h1 >Ed-Tech</h1>
+                    <p>Ed-Tech is Original Japanese showroom for purchasing reliable motorcycles. All of you are invited to our showroom. We have been providing best service for last 5 years </p>
                     <ul class="nav justify-content-center ">
                         <li class="nav-item ">
                             <Link class="nav-link text-light" to="/home">Home</Link>

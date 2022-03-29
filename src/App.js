@@ -9,9 +9,8 @@ import Login from './components/Login/Login';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import About from './components/About/About';
-import Explorebike from './components/ExploreBikes/Explorebike';
+import Explorebook from './components/ExploreBook/Explorebook';
 import Order from './components/Order/Order';
-import Dashboardhome from './components/Dashboard/Dashboardhome/Dashboardhome';
 initializeAthentication();
 
 function App() {
@@ -26,17 +25,14 @@ function App() {
               <Home></Home>
             </Route>
 
-            <Route path="/explorebike">
-              <Explorebike></Explorebike>
+            <Route path="/explorebook">
+              <Explorebook></Explorebook>
             </Route>
 
-            <PrivateRoute path="/bike/:bikeId">
+            <PrivateRoute path="/book/:bookId">
               <Order></Order>
             </PrivateRoute>
 
-            <PrivateRoute path="/dashboard">
-              <Dashboardhome></Dashboardhome>
-            </PrivateRoute>
 
             <Route path="/contact">
               <Contact></Contact>

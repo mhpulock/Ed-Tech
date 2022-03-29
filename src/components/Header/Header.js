@@ -14,7 +14,7 @@ const Header = () => {
                 <Link className="navbar-brand" to="/home">
                     <div className="logo-link">
                         <img className="img-logo" src={logo} alt="logo" />
-                        <h1>Bike Choice</h1>
+                        <h1>Ed-Tech</h1>
                     </div>
                 </Link>
 
@@ -29,7 +29,7 @@ const Header = () => {
                             <Link className="nav-link active" to="/home">Home</Link>
                         </li>
                         <li className="nav-item item-size">
-                            <Link className="nav-link " to="/explorebike">Explore Bikes</Link>
+                            <Link className="nav-link " to="/explorebook">Explore Books</Link>
                         </li>
                         {user.email && <li className="nav-item item-size">
                             <Link className="nav-link " to="/dashboard">Dashboard</Link>
